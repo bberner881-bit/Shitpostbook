@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fucking Color This! — Color Away the Bullshit</title>
+<meta name="description" content="A free online swear-word coloring book. 40 bold, vulgar word designs dressed up in flowers, mushrooms, skulls and checkerboards. Pick by mood, color on your phone, save or print.">
+<meta name="theme-color" content="#14111a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bangers&family=Bungee&family=Chewy&family=Lilita+One&family=Luckiest+Guy&family=Nunito:wght@400;700;900&family=Titan+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff3ea5'/%3E%3Ctext x='32' y='46' font-size='40' font-family='Impact,Arial Black,sans-serif' font-weight='900' text-anchor='middle' fill='%23fff' stroke='%23111' stroke-width='3' paint-order='stroke'%3EF!%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- Adults-only gate -->
+<div id="gate" class="gate" hidden>
+  <div class="gate-card">
+    <div class="gate-badge">18+</div>
+    <h1 class="rainbow">Strictly Adults Only</h1>
+    <p>This is a coloring book made of profanity. No inspirational quotes about journeys. No apologies.</p>
+    <p>Are you an adult who is officially out of fucks to give?</p>
+    <div class="gate-actions">
+      <button id="gate-yes" class="btn big">Yes. Let me in.</button>
+      <button id="gate-no" class="btn ghost">No, I'm a child</button>
+    </div>
+    <p id="gate-nope" class="gate-nope" hidden>Fair enough. Come back when you've grown up and run out of patience.</p>
+  </div>
+</div>
+
+<header class="top">
+  <a href="#/" class="brand" id="brand">
+    <span class="brand-line rainbow">Fucking</span>
+    <span class="brand-line rainbow">Color This!</span>
+  </a>
+  <nav class="nav">
+    <a href="#/" data-nav="lineup">The Filthy Lineup</a>
+    <a href="#/mood" data-nav="mood">Pick by Mood</a>
+    <a href="#/about" data-nav="about">About</a>
+  </nav>
+  <div class="progress" id="progress" title="Pages you've finished"><span id="progress-text">0 / 40</span><i><b id="progress-bar"></b></i></div>
+</header>
+
+<main id="app">
+  <!-- Views are rendered by app.js -->
+</main>
+
+<footer class="foot">
+  <p><strong>Color away the bullshit.</strong> A web edition of the <em>Fucking Color This!</em> coloring book series by Dano Unsupervised and author Daniel C Willox.</p>
+  <p>Like the paper books, no slogan here is recycled from a book. New shelf, new insults. <a href="https://www.amazon.ca/dp/B0HQJYFW2M" target="_blank" rel="noopener">Get the paperbacks on Amazon</a>.</p>
+</footer>
+
+<!-- Print target: filled by app.js right before printing -->
+<div id="print-sheet" class="print-sheet" aria-hidden="true"></div>
+
+<template id="tpl-color-input"><input type="color" id="custom-color" value="#ff3ea5" aria-label="Custom color"></template>
+
+<script src="motifs.js"></script>
+<script src="designs.js"></script>
+<script src="render.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
